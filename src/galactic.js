@@ -7,6 +7,8 @@ export function Galactic(year,month,day) {
   this.marsYears = this.marsAge();
   this.jupiterYears = this.jupiterAge();
 
+
+
 }
 
 Galactic.prototype.dateDifference = function() {
@@ -23,19 +25,19 @@ Galactic.prototype.mercuryAge = function() {
 }
 
 Galactic.prototype.venusAge = function() {
-  const mercuryRatio = 0.62;
-  let mercury = Math.floor(this.earthYears/mercuryRatio);
+  const venusRatio = 0.62;
+  let venus = Math.floor(this.earthYears/venusRatio);
   return venus;
 }
 
 Galactic.prototype.marsAge = function() {
-  const mercuryRatio = 1.88;
-  let mercury = Math.floor(this.earthYears/mercuryRatio);
+  const marsRatio = 1.88;
+  let mars = Math.floor(this.earthYears/marsRatio);
   return mars;
 }
 
 Galactic.prototype.jupiterAge = function() {
-  const mercuryRatio = 11.86;
-  let mercury = Math.floor(this.earthYears/mercuryRatio);
+  const jupiterRatio = 11.86;
+  let jupiter = Math.floor(this.earthYears/jupiterRatio);
   return jupiter;
 }
