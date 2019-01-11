@@ -53,5 +53,13 @@ Galactic.prototype.yearsRatio = function(planet) {
 Galactic.prototype.yearsLeft = function(country,planet) {
   let expectancy = this.lifeExpect(country);
   let ratio = this.yearsRatio(planet);
-  return Math.floor((expectancy - this.earthYears)/(ratio))
+  if ((this.earthYears) == expectancy) {
+    return "this person is at the age of their life expectancy";
+  }
+  else if ((this.earthYears) < expectancy) {
+    return "this person has " + (Math.floor((expectancy - this.earthYears)/(ratio))) + " years left on planet " + planet;
+  }
+  else if ((this.earthYears) > expectancy) {
+    return "this person is " + Math.floor((this.earthYears - expectancy)/(ratio)) + " years past their life expectancy in " + planet + " years"
+  }
 }
