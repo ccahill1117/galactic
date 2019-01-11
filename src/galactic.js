@@ -49,3 +49,9 @@ Galactic.prototype.yearsRatio = function(planet) {
   })
   return ratio[1];
 }
+
+Galactic.prototype.yearsLeft = function(country,planet) {
+  let expectancy = this.lifeExpect(country);
+  let ratio = this.yearsRatio(planet);
+  return Math.floor((expectancy - this.earthYears)/(ratio))
+}
