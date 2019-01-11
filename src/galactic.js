@@ -7,8 +7,6 @@ export function Galactic(year,month,day) {
   this.marsYears = this.marsAge();
   this.jupiterYears = this.jupiterAge();
 
-
-
 }
 
 Galactic.prototype.dateDifference = function() {

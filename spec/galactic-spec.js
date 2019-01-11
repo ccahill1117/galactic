@@ -11,28 +11,34 @@ describe ('GalacticTest', function() {
   })
 })
 
-  describe ('Galactic', function() {
-    beforeEach(function() {
-      newUser = new Galactic(1989,10,17);
-    })
-    it('should return a normal earth age', function() {
-      expect(newUser.earthYears).toEqual(29);
-    })
-    it('should return a mercury age based upon earth age', function() {
-      expect(newUser.mercuryAge()).toEqual(120);
-    })
-    it('should return a venus age based upon earth age', function() {
-      expect(newUser.venusAge()).toEqual(46);
-    })
-    it('should return a mars age based upon earth age', function() {
-      expect(newUser.marsAge()).toEqual(15);
-    })
-    it('should return a jupiter age based upon earth age', function() {
-      expect(newUser.jupiterAge()).toEqual(2);
-    })
+describe ('Galactic', function() {
+  beforeEach(function() {
+    newUser = new Galactic(1989,10,17);
+  })
+  it('should return a normal earth age', function() {
+    expect(newUser.earthYears).toEqual(29);
+  })
+  it('should return a mercury age based upon earth age', function() {
+    expect(newUser.mercuryAge()).toEqual(120);
+  })
+  it('should return a venus age based upon earth age', function() {
+    expect(newUser.venusAge()).toEqual(46);
+  })
+  it('should return a mars age based upon earth age', function() {
+    expect(newUser.marsAge()).toEqual(15);
+  })
+  it('should return a jupiter age based upon earth age', function() {
+    expect(newUser.jupiterAge()).toEqual(2);
+  })
+  it('should return a user life years left based upon country of origin', function() {
+    expect(newUser.lifeExpect("USA")).toEqual(79)
+  })
+  
 })
 
-// added a GalacticTest 
+
+
+// added a GalacticTest with a hardcorded testDate so that the tests would not fail if run on another day
 
 function GalacticTest(year,month,day) {
   this.earthBirthday = new Date(year,month,day)
