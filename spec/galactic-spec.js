@@ -41,8 +41,6 @@ describe ('Galactic', function() {
   })
 })
 
-
-
 // added a GalacticTest with a hardcorded testDate so that the tests would not fail if run on another day
 
 function GalacticTest(year,month,day) {
