@@ -1,10 +1,14 @@
 import { Galactic } from './../src/galactic.js';
 
 
-  describe ('Galactic', function() {
+let newUser;
 
+  describe ('Galactic', function() {
+    beforeEach(function() {
+      newUser = new Galactic(25)
+    })
   it('should return a normal earth age', function() {
-    let newUser = new Galactic(25)
-      expect(newUser.earthAge).toEqual(25);
+      expect(newUser.mercuryAge).toEqual(104);
   })
+  it('')
 })
