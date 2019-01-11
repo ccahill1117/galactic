@@ -30,10 +30,12 @@ describe ('Galactic', function() {
   it('should return a jupiter age based upon earth age', function() {
     expect(newUser.jupiterAge()).toEqual(2);
   })
-  it('should return a user life years left based upon country of origin', function() {
-    expect(newUser.lifeExpect("USA")).toEqual(79)
+  it('should return a user life expectancy based upon country of origin', function() {
+    expect(newUser.lifeExpect("USA")).toEqual(79);
   })
-  
+  it('should return the years ratio based upon a planet', function() {
+    expect(newUser.yearsRatio("Mercury")).toEqual(0.24);
+  })
 })
 
 
