@@ -23,8 +23,8 @@ $(document).ready(function(){
   let userYear = ((userGalaxy.earthBirthday).getFullYear()).toString();
   let userMonth = monthName((userGalaxy.earthBirthday).getMonth()).toString();
   let userDate = (userGalaxy.earthBirthday.getDate()).toString();
-  let testString = `${userMonth} ${userDate}, ${userYear}`
-  $(".resultDiv").text(testString);
+  let userBday = `${userMonth} ${userDate}, ${userYear}`
+  $("#earthBirthday").text(userBday);
 
 
 });
