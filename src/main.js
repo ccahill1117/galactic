@@ -7,10 +7,9 @@ $(document).ready(function(){
   $("#inputForm").submit(function(event){
     event.preventDefault();
 
-    let userString = $("#inputText").val();
-    let string = new Galactic(userString);
-    $(".resultDiv").empty();
-    $(".resultDiv").text(string.string);
+    let testPerson = new Galactic(21);
+
+    $(".resultDiv").text(testPerson.earthAge);
 
   });
 });

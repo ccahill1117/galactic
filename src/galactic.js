@@ -1,3 +1,4 @@
-export function Galactic(string) {
-  this.galaxy = string;
+export function Galactic(age) {
+  this.earthAge = age + 2;
+
 }
