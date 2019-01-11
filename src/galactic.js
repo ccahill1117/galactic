@@ -1,4 +1,4 @@
 export function Galactic(age) {
-  this.earthAge = age + 2;
+  this.earthAge = age;
 
 }
