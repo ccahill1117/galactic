@@ -1,12 +1,12 @@
 export function Galactic(age) {
-  this.earthAge = age;
-  this.mercuryYears = this.mercuryAge()
+  this.earthYears = age;
+  this.mercuryYears = this.mercuryAge();
 
 }
 
 
-Galactic.prototype.mercuryAge = function(age) {
+Galactic.prototype.mercuryAge = function() {
   const mercuryRatio = 0.24;
-  let mercury = Math.floor(this.earthAge/mercuryRatio);
+  let mercury = Math.floor(this.earthYears/mercuryRatio);
   return mercury;
 }
