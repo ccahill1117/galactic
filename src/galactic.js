@@ -47,5 +47,5 @@ Galactic.prototype.yearsRatio = function(planet) {
   let ratio = planetRatios.find(function(element) {
     return element[0] == planet
   })
-  return ratio;
+  return ratio[1];
 }
