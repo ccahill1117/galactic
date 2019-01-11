@@ -36,6 +36,9 @@ describe ('Galactic', function() {
   it('should return the years ratio based upon a planet', function() {
     expect(newUser.yearsRatio("Mercury")).toEqual(0.24);
   })
+  it('should return a user years left based upon planet', function() {
+    expect(newUser.yearsLeft("Mars")).toEqual(26);
+  })
 })
 
 
