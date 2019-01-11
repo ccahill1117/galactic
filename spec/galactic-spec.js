@@ -8,7 +8,7 @@ let newUser;
       newUser = new Galactic(25)
     })
   it('should return a normal earth age', function() {
-      expect(newUser.mercuryAge).toEqual(104);
+      expect(newUser.mercuryYears).toEqual(104);
   })
   it('')
 })
