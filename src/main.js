@@ -13,13 +13,15 @@ $(document).ready(function(){
 
 
   let userBirthday = ($("#userBirthday").val()).toString();
+  let userCountry = $("#country").val();
+
   let userBirthdayMonthParse =  parseInt(userBirthday.substring(5,7)) - 1
   let userGalaxy = new Galactic(
     ((parseInt(userBirthday.substring(0,4)))).toString(),
     userBirthdayMonthParse,
     userBirthday.substring(8,10)
   );
-  console.log(userGalaxy);
+
 
   let userYear = ((userGalaxy.earthBirthday).getFullYear()).toString();
   let userMonth = monthName((userGalaxy.earthBirthday).getMonth()).toString();
@@ -28,12 +30,15 @@ $(document).ready(function(){
 
   $("#earthBirthday").text(userBday);
   $("#earthAge").text(userGalaxy.earthYears);
-  console.log(userGalaxy.earthYears)
   $("#mercuryAge").text(userGalaxy.mercuryAge());
   $("#venusAge").text(userGalaxy.venusAge());
   $("#marsAge").text(userGalaxy.marsAge());
   $("#jupiterAge").text(userGalaxy.jupiterAge());
-
+  $("#earthYears").text(userGalaxy.yearsLeft(userCountry,"Earth"))
+  $("#mercuryYears").text(userGalaxy.yearsLeft(userCountry,"Mercury"))
+  $("#venusYears").text(userGalaxy.yearsLeft(userCountry,"Venus"))
+  $("#marsYears").text(userGalaxy.yearsLeft(userCountry,"Mars"))
+  $("#jupiterYears").text(userGalaxy.yearsLeft(userCountry,"Jupiter"))
 });
 
 });

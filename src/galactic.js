@@ -36,7 +36,7 @@ Galactic.prototype.jupiterAge = function() {
   return jupiter;
 }
 Galactic.prototype.lifeExpect = function(country) {
-  const expectancies = [["USA",79 ],["JPN",84],["Switzerland",83]];
+  const expectancies = [["USA",79 ],["Japan",84],["Switzerland",83]];
   let lifeExpectancy = expectancies.find(function(element) {
     return element[0] == country
   })
