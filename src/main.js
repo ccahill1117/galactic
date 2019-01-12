@@ -1,6 +1,8 @@
 import './styles.css';
 import { Galactic } from './galactic.js';
 import $ from 'jquery';
+import 'bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 let monthName = function(getMonth){
   const mlist = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
