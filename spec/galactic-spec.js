@@ -1,8 +1,9 @@
 import { Galactic } from './../src/galactic.js';
-let newUser;
-let testUser;
+
 
 describe ('GalacticTest', function() {
+  let testUser = null;
+
   beforeEach(function() {
     testUser = new GalacticTest(2019,0,10)
   })
@@ -12,6 +13,8 @@ describe ('GalacticTest', function() {
 })
 
 describe ('Galactic', function() {
+  let newUser = null;
+  
   beforeEach(function() {
     newUser = new Galactic(1989,10,17);
   })
