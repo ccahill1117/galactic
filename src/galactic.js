@@ -16,42 +16,42 @@ export class Galactic {
   }
   mercuryAge() {
     const mercuryRatio = 0.24;
-    let mercury = Math.floor(this.earthYears/mercuryRatio);
+    const mercury = Math.floor(this.earthYears/mercuryRatio);
     return mercury;
   }
   venusAge() {
     const venusRatio = 0.62;
-    let venus = Math.floor(this.earthYears/venusRatio);
+    const venus = Math.floor(this.earthYears/venusRatio);
     return venus;
   }
   marsAge() {
     const marsRatio = 1.88;
-    let mars = Math.floor(this.earthYears/marsRatio);
+    const mars = Math.floor(this.earthYears/marsRatio);
     return mars;
   }
   jupiterAge() {
     const jupiterRatio = 11.86;
-    let jupiter = Math.floor(this.earthYears/jupiterRatio);
+    const jupiter = Math.floor(this.earthYears/jupiterRatio);
     return jupiter;
   }
   lifeExpect(country) {
     const expectancies = [["USA",79 ],["Japan",84],["Switzerland",83]];
-    let lifeExpectancy = expectancies.find(function(element) {
+    const lifeExpectancy = expectancies.find(function(element) {
       return element[0] == country
     })
     return lifeExpectancy[1]
   }
   yearsRatio(planet) {
     const planetRatios = [["Earth",1],["Mercury",0.24],["Venus",0.62],["Mars",1.88],["Jupiter",11.86]];
-    let ratio = planetRatios.find(function(element) {
+    const ratio = planetRatios.find(function(element) {
       return element[0] == planet
     })
     return ratio[1];
   }
 
   yearsLeft(country,planet) {
-    let expectancy = this.lifeExpect(country);
-    let ratio = this.yearsRatio(planet);
+    const expectancy = this.lifeExpect(country);
+    const ratio = this.yearsRatio(planet);
     if ((this.earthYears) == expectancy) {
       return "this person is at the age of their life expectancy";
     }
